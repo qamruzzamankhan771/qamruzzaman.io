@@ -7,11 +7,13 @@
     
     <!-- Add Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
+    <!-- Link your custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+  </head>
 <body>
 
     <!-- Hero Section -->
-    <section id="hero" class="jumbotron text-center bg-primary text-white">
+    <section id="hero" class="jumbotron jumbotron-fluid text-center bg-primary text-white">
         <h1 class="display-4">Qamruzzaman Khan</h1>
         <h2 class="lead">Experienced Backend Developer | Exploring Innovative Tech</h2>
         <p class="lead">Welcome to my world of coding and innovation. I am Qamruzzaman Khan, an experienced software developer with a passion for backend technologies. With a drive to deliver scalable solutions and an eye for innovation, I am here to take your projects to new heights.</p>
@@ -34,64 +36,83 @@
                 <p>Despite being an introvert by nature, I thrive in the world of coding, where I can bring creative solutions to complex business problems. My work ethic is driven by the passion to create, innovate, and deliver. Let's work together to turn your vision into reality.</p>
             </div>
             <div class="col-md-6">
-                <!-- Add an image of yourself here if desired -->
+                <img src="./assets/profile.png" alt="Your Image" class="about-image">
             </div>
         </div>
     </section>
 
-    <!-- My Work Section -->
+
+       <!-- My Work Section -->
     <section id="work" class="container mt-5">
-        <h2>My Work</h2>
+      <h2>My Work</h2>
 
-        <!-- Work Projects -->
-        <div class="card-deck">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Agent Desktop by Uniphore</h5>
-                    <p class="card-text">Tech Stack: Java, Spring Boot, Postgres, JPA ORM</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Bot Store by Unilever</h5>
-                    <p class="card-text">Tech Stack: Javascript, Node.js, Express.js, Sequelize ORM, MySQL</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Patthar</h5>
-                    <p class="card-text">Tech Stack: Typescript, Nest.js, Postgres, Sequelize ORM</p>
-                </div>
-            </div>
-        </div>
+      <!-- Work Projects Carousel -->
+      <div id="work-carousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5 class="card-title">Agent Desktop by Uniphore</h5>
+                          <p class="card-text">Tech Stack: Java, Spring Boot, Postgres, JPA ORM</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5 class="card-title">Bot Store by Unilever</h5>
+                          <p class="card-text">Tech Stack: Javascript, Node.js, Express.js, Sequelize ORM, MySQL</p>
+                      </div>
+                  </div>
+              </div>
+              <!-- Add more carousel items for other work projects -->
+          </div>
+          <a class="carousel-control-prev" href="#work-carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#work-carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+      </div>
+  </section>
 
-        <!-- Freelance Projects -->
-        <div class="mt-4">
-            <h3>Freelance Projects</h3>
-            <div class="card-deck">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Garage System</h5>
-                        <p class="card-text">Tech Stack: Java, Spring Boot, Postgres</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Employee Management</h5>
-                        <p class="card-text">Tech Stack: Java, Spring Boot, Postgres</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Muhurt</h5>
-                        <p class="card-text">Tech Stack: Java, Spring Boot, Postgres</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- Freelance Section -->
+  <section id="freelance" class="container mt-5">
+      <h2>Freelance Projects</h2>
 
-        <p class="mt-4">I specialize in backend development using Typescript and Nest.js, creating robust and scalable solutions. I bring professionalism, dedication, and a track record of successful projects to the table.</p>
-    </section>
+      <!-- Freelance Projects Carousel -->
+      <div id="freelance-carousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5 class="card-title">Garage System</h5>
+                          <p class="card-text">Tech Stack: Java, Spring Boot, Postgres</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5 class="card-title">Employee Management</h5>
+                          <p class="card-text">Tech Stack: Java, Spring Boot, Postgres</p>
+                      </div>
+                  </div>
+              </div>
+              <!-- Add more carousel items for other freelance projects -->
+          </div>
+          <a class="carousel-control-prev" href="#freelance-carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#freelance-carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+      </div>
+  </section>
 
     <!-- Contact Me Section -->
     <section id="contact" class="container mt-5">

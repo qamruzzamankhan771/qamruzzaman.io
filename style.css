@@ -1,0 +1,22 @@
+/* styles.css */
+
+/* Darken carousel navigation arrows */
+/* .carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Darken the arrow icons themselves */
+/* .carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    color: #242323; */
+/* } */
+
+/* Adjust the width of the image in the About Me section */
+.about-image {
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image oval */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
