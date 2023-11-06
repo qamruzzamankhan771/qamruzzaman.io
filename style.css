@@ -1,22 +1,601 @@
-/* styles.css */
-
-/* Darken carousel navigation arrows */
-/* .carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5);
+body {
+  background-color: #292929;
+  color: #fff;
+  font-family: "Inter", sans-serif;
 }
 
-/* Darken the arrow icons themselves */
-/* .carousel-control-prev-icon::before,
-.carousel-control-next-icon::before {
-    color: #242323; */
-/* } */
-
-/* Adjust the width of the image in the About Me section */
-.about-image {
-    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Make the image oval */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+.white-color {
+  color: #fff;
 }
 
+.nav-bar {
+  position: fixed;
+  right: 0;
+  top: 25%;
+  color: brown;
+}
+
+.nav-bar ul {
+  padding-right: 20px;
+}
+
+.hero {
+  margin-bottom: 150px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  display: grid;
+}
+
+.nav-bar ul .active {
+  background-color: #f7b30f !important;
+}
+
+.nav-bar li {
+  list-style-type: none;
+  background-color: grey;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 5px;
+}
+
+.nav-bar li:hover {
+  background-color: #f7b30f;
+}
+
+.nav-bar li img {
+  width: 30px;
+  height: 30px;
+}
+
+.profile-image {
+  display: flex;
+}
+
+.profile-image img {
+  border-left: 15px solid #f7b30f;
+  border-bottom: 15px solid #f7b30f;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.profile-content {
+  display: grid;
+  align-items: center;
+  padding-left: 200px;
+  align-content: center;
+}
+
+.profile-content h2 {
+  color: #f7b30f;
+  margin-bottom: 20px;
+}
+
+.profile-content h2 span {
+  color: #fff;
+  margin-left: 20px;
+}
+
+.profile-content p {
+  color: #fff;
+  width: 550px;
+}
+
+button {
+  width: max-content !important;
+  padding: 12px 40px;
+  background-color: transparent;
+  border-radius: 6%;
+  border: 1px solid #f7b30f;
+  color: #f7b30f;
+  font-size: 20px;
+  margin-top: 10px !important;
+}
+
+.about h2 span {
+  color: #f7b30f;
+}
+
+.about h3 {
+  color: #fff;
+  padding-bottom: 12px;
+}
+
+.about ul li {
+  color: #fff;
+  list-style-type: none;
+  padding-bottom: 35px;
+  font-size: 18px;
+}
+
+.num-list span {
+  font-size: 42px;
+  color: #f7b30f;
+}
+
+.num-list p,
+.num-list span sup {
+  padding-top: 6px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.num-list p {
+  margin-left: 30px;
+  margin-top: -16px;
+  max-width: 120px;
+}
+
+.num-list dl {
+  height: 200px;
+  padding: 60px;
+  box-shadow: 0px 0px 6px 0px rgba(247, 179, 15, 0.2);
+}
+
+.personal-info ul li {
+  font-weight: 100;
+}
+
+.personal-info ul li span {
+  font-weight: 700;
+}
+
+.personal-info ul {
+  padding-left: 0;
+}
+
+.personal-info-details {
+  padding-top: 30px;
+  padding-left: 80px;
+}
+
+#background {
+  /* display: block; */
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#background h2::after {
+  content: "RESUME";
+  color: rgba(80, 80, 80, 0.62);
+  font-size: 92px;
+  position: absolute;
+  left: -50px;
+  z-index: -1;
+  font-weight: 800;
+  letter-spacing: 7px;
+  top: -20px;
+}
+
+#background h2 {
+  color: #fff;
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 58px;
+  letter-spacing: -3px;
+  /* z-index: 1024; */
+  position: relative;
+}
+
+#background h2 span {
+  color: #f7b30f;
+}
+
+#bg-text {
+  color: rgba(80, 80, 80, 0.62);
+  font-size: 92px;
+  position: absolute;
+  left: 34%;
+  top: -32%;
+  z-index: -10;
+  font-weight: 800;
+  letter-spacing: 7px;
+}
+
+#download-cv {
+  border-radius: 40px;
+  padding: 14px 36px;
+  border: 1px solid #f7b30f;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  display: inline-block;
+  width: auto;
+}
+
+#download-cv:hover {
+  background-color: #f7b30f;
+  color: #151515;
+}
+
+#download-cv a {
+  color: #f7b30f;
+}
+
+#background h2 {
+  font-weight: 900;
+}
+
+.skill-header {
+  text-align: center;
+  padding: 60px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.skill-percent {
+  border: 8px solid #f7b30f;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 52px;
+  font-size: 22px;
+}
+
+.skills h3 {
+  font-size: 42px;
+}
+
+.about-cards {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 32px;
+  border-radius: 4px;
+  margin-bottom: 32px;
+}
+
+.about-cards h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #f7b30f;
+  margin: 0;
+}
+
+.about-cards h6 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  position: relative;
+  margin-left: 42px;
+}
+
+.about-cards h6::before {
+  content: "";
+  height: 2px;
+  width: 30px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  left: -34px;
+}
+
+.experience-wraper h2 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.exp-card {
+  margin-bottom: 32px;
+}
+
+.header-flex {
+  display: inline-flex;
+  border-radius: 8px;
+}
+
+.header-flex h6 {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 8px 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.header-flex .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #f7b30f;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header-flex .icon::after {
+  content: "";
+  width: 1px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.header-flex .icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.header-flex h3 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.header-flex h3 span {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.header-flex p {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.portfolio-wraper {
+  padding: 80px 0;
+}
+
+.portfolio-image .parent-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.portfolio-image .parent-img {
+  margin-bottom: 32px;
+}
+
+.portfolio-wraper #background {
+  /* display: block; */
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.portfolio-wraper #background h2::after {
+  content: "WORKS";
+  color: rgba(80, 80, 80, 0.62);
+  font-size: 92px;
+  position: absolute;
+  left: -28px;
+  z-index: -1;
+  font-weight: 800;
+  letter-spacing: 7px;
+  top: -20px;
+}
+
+.portfolio-wraper .portfolio-nav {
+  justify-content: center;
+}
+
+.portfolio-nav .nav-item .nav-link {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.portfolio-nav .nav-item .nav-link.active {
+  background-color: transparent;
+  color: #f7b30f;
+}
+
+.contact-wraper #background {
+  max-width: 340px;
+  margin-bottom: 56px;
+}
+
+.contact-wraper #background h2::after {
+  content: "CONTACT";
+  color: rgba(80, 80, 80, 0.62);
+  font-size: 92px;
+  position: absolute;
+  left: -74px;
+  z-index: -1;
+  font-weight: 800;
+  letter-spacing: 7px;
+  top: -20px;
+}
+
+.contact-wraper .form-content .inner-flex {
+  display: flex;
+}
+
+.form-content h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.form-content p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.form-content .inner-flex img {
+  width: 56px;
+  height: 56px;
+  margin-right: 24px;
+}
+
+.form-content .inner-flex {
+  margin-top: 24px;
+}
+
+.inner-flex .item h5 {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.inner-flex .item p {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+form .form-group {
+  margin-bottom: 40px;
+}
+
+.form-group .form-control {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 12px 16px;
+}
+.form-control::placeholder {
+  color: #ffffff;
+}
+.social-media {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 0;
+  margin: 32px 0 0 0;
+}
+
+.social-media li {
+  list-style-type: none;
+  margin-right: 16px;
+}
+
+.social-media li a img {
+  width: 28px;
+  height: 28px;
+}
+@media screen and (max-width: 767px) {
+  .contact-content div {
+    margin: 8px 0;
+  }
+  .contact-wraper #background h2::after {
+    font-size: 54px;
+    left: 22px;
+    top: -12px;
+    letter-spacing: 2px;
+  }
+
+  .about #background h2::after {
+    font-size: 48px;
+    left: 8px;
+    right: -6px;
+    top: -9px;
+  }
+
+  .portfolio-wraper #background h2::after {
+    font-size: 58px;
+    top: -14px;
+    left: 28px;
+  }
+
+  .skill-percent {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-image {
+    flex-direction: column;
+  }
+
+  .profile-content {
+    padding: 32px 0 0 0;
+  }
+
+  .profile-content p {
+    width: 100%;
+  }
+
+  .hero {
+    margin-bottom: 56px;
+  }
+
+  #background {
+    max-width: 100%;
+  }
+
+  #background h2 {
+    font-size: 32px;
+  }
+
+  /* #background h2::after {
+    font-size: 42px;
+    left: 0;
+    right: 0;
+  } */
+
+  .personal-info-details {
+    padding-left: 0;
+  }
+
+  .personal-info ul {
+    margin-bottom: 0;
+  }
+
+  .about ul li {
+    padding-bottom: 16px;
+  }
+
+  #download-cv {
+    width: 100%;
+  }
+
+  .header-flex .contents {
+    width: fit-content;
+  }
+
+  .header-flex h3 {
+    font-size: 24px;
+  }
+
+  .header-flex h3 span {
+    font-size: 18px;
+  }
+
+  .header-flex .icon::after {
+    height: 146px;
+    bottom: -146px;
+  }
+
+  .experience-wraper h2 {
+    font-size: 28px;
+  }
+
+  .skill-header {
+    font-size: 28px;
+  }
+}
